@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="container">
+        <h1>Kelompok 3</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="profile.html">Our Team</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleSidebar()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <a href="index.html" onclick="closeSidebar()">Home</a>
+      <a href="about.html" onclick="closeSidebar()">About</a>
+      <a href="profile.html" onclick="closeSidebar()">Our Team</a>
+      <a href="contact.html" onclick="closeSidebar()">Contact</a>
+    </div>
+    <section class="contact">
+      <p class="lead">Contact Us :</p>
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fv2">
+      <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const sidebar = document.getElementById("sidebar");
+
+      // Toggle sidebar
+      function toggleSidebar() {
+        sidebar.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
